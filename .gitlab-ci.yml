@@ -2,6 +2,7 @@ stages:
   - version
   - build
   - release
+  - push
   - deploy
 
 variables:
