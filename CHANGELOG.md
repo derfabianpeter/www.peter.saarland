@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.0.4
+2019-12-08
+
+### Fixes
+
+- **ci:** too many quotes? (7f7ec82f561b1eda7d1d4733859c00de542c0085)
+
 ## 0.0.3
 2019-12-08
 
