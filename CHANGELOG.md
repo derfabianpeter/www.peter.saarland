@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.0.6
+2019-12-08
+
+### Fixes
+
+- **ci:** ssh + sec stuff (bf8b09b1f5ba8b2fca53bd291380e0c7e8facdc7)
+
 ## 0.0.5
 2019-12-08
 
