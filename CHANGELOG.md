@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.0.2
+2019-12-08
+
+### Fixes
+
+- **ci:** missing quotes on SSH key... (8dc6ec3195c3ed1a21ede713332cc4449b4634a1)
+
 ## 0.0.1
 2019-12-08
 
