@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.0.8
+2019-12-08
+
+### Fixes
+
+- **ci:** stuff (a67b11ccb3cebda27139f2df04e6e5fb79a028f8)
+
 ## 0.0.7
 2019-12-08
 
