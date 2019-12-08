@@ -2,6 +2,16 @@
 
 <!--- next entry here -->
 
+## 0.0.7
+2019-12-08
+
+### Fixes
+
+- **ci:** release (8ba3ffb5a82f2365fbb5f576a005f88280077af6)
+- **ci:** stuff (41b0ca8dae9c9a2429451504cf8452b759f37d30)
+- **ci:** stuff (88fa239ce2998be6275762d67bc4fe11eaafb767)
+- **ci:** stuff (fcb8fd89219118899696cad5b7909c13a2390989)
+
 ## 0.0.6
 2019-12-08
 
