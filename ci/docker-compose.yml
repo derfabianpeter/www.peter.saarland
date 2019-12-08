@@ -1,0 +1,24 @@
+version: '3.3'
+
+services:
+  peter-www:
+    image: $CI_REGISTRY_IMAGE:latest
+    container_name: peter-www
+    environment:
+      - TZ=Europe/Berlin
+    networks:
+      - traefik-public
+    restart: unless-stopped
+    labels:
+      - traefik.frontend.rule=Host:www.peter.saarland
+      - traefik.enable=true
+      - traefik.port=80
+      - traefik.protocol=http
+      - traefik.docker.network=traefik-public
+      - traefik.frontend.entryPoints=http,https
+      - traefik.frontend.headers.SSLRedirect=true
+
+networks:
+  nodered:
+  traefik-public:
+    external: true

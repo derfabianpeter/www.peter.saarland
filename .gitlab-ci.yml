@@ -1,5 +1,7 @@
 stages:
+  - version
   - build
+  - release
   - deploy
 
 .deployment: &deployment |
@@ -18,21 +20,29 @@ stages:
   echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
   ssh-keyscan -H '${DEPLOYMENT_TARGET}' >> ~/.ssh/known_hosts
 
-# this hidden job is specific to our Ansible
-# it deploys a named ("techblog") docker container
-# see https://blog.callr.tech/gitlab-ansible-docker-ci-cd/
-.deploy: &deploy
-  - >
-    cd /var/ansible &&
-    sudo -E ansible-playbook deploy_docker_callr_applications.yml
-    --diff
-    --private-key="/var/ansible/ssh_keys/gitlab/gitlab-ci"
-    -i "inventories/$ANSIBLE_INVENTORY"
-    -l "$ANSIBLE_SUBSET"
-    -e "app=techblog tag=latest"
+version:
+  stage: version
+  image: registry.gitlab.com/juhani/go-semrel-gitlab:v0.21.1
+  script:
+    - release test-git || true
+    - release test-api
+    - release next-version --allow-current
+    - release next-version --allow-current > .next-version
+    - echo "RELEASE_URL=https://gitlab.com/api/v4/projects/$CI_PROJECT_ID/jobs/$CI_JOB_ID/artifacts/release" > build_info
+    - echo "RELEASE_DESC=\"$(uname -mo) binary\"" >> build_info
+    - echo "RELEASE_SHA=$CI_COMMIT_SHA" >> build_info
+    - echo "RELEASE_VERSION=$(<.next-version)" >> build_info
+  artifacts:
+    paths:
+    - build_info
+    - .next-version
+  except:
+    - tags
 
 Build:
   stage: build
+  services:
+  - docker:19.03.2-dind
   # remember to use specific version in your build images
   # see https://blog.callr.tech/building-docker-images-with-gitlab-ci-best-practices/
   image: docker:19.03.5-git 
@@ -49,9 +59,26 @@ Build:
     - docker build -t $CI_REGISTRY_IMAGE:latest .
     - docker push $CI_REGISTRY_IMAGE:latest
 
+# Release new Version
+Release:
+  stage: release
+  image: registry.gitlab.com/juhani/go-semrel-gitlab:v0.21.1
+  script:
+    - rm -f release_info
+    - mv build_info release_info
+    - . release_info
+    - release -v
+    - release changelog
+    - release commit-and-tag CHANGELOG.md release_info
+  only:
+    - master
+
 Deploy:
   stage: deploy
-  script: *deployment
+  image: tiangolo/docker-with-compose
+  script: 
+   - *deployment
+   - DOCKER_HOST=ssh://${DEPLOYMENT_TARGET} docker-compose -f ci/docker-compose.yml -p peter-www up --remove-orphans -d
   allow_failure: false
   # deploying master only
   only:
@@ -61,7 +88,3 @@ Deploy:
   # # we tag specific runners here in our platform
   # tags:
   #   - deployment
-  variables:
-    # because the deployment stage does not need the source code anymore
-    # we set GIT_STRATEGY to none
-    GIT_STRATEGY: none
