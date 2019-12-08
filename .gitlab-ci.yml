@@ -22,7 +22,8 @@ variables:
   mkdir -p ~/.ssh
   chmod 700 ~/.ssh
   echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config 
-  ssh-keyscan -H ${DEPLOYMENT_TARGET} >> ~/.ssh/known_hosts > /dev/null 2>&1
+  ssh-keyscan -H ${DEPLOYMENT_TARGET} >> ~/.ssh/known_hosts
+  
 
 version:
   stage: version
