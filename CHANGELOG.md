@@ -2,6 +2,14 @@
 
 <!--- next entry here -->
 
+## 0.0.5
+2019-12-08
+
+### Fixes
+
+- **ci:** removed output of SSH stuff; fixed wrong network in docker.compose.yml (1d75c319e6cad359d3e076cec2c862dcf787bf80)
+- **security:** added HSTS stuff (31e7e52d7af911a654d96ceda8cb6baed9020b5e)
+
 ## 0.0.4
 2019-12-08
 
