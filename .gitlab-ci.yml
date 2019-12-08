@@ -1,0 +1,67 @@
+stages:
+  - build
+  - deploy
+
+.deployment: &deployment |
+  # Setup SSH deploy keys
+  which ssh-agent || ( apk add --no-cache openssh-client )
+  eval $(ssh-agent -s)
+  ##
+  ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+  ## We're using tr to fix line endings which makes ed25519 keys work
+  ## without extra base64 encoding.
+  ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
+  ##
+  echo ${SSH_PRIVATE_KEY} | tr -d '\r' | ssh-add - > /dev/null
+  mkdir -p ~/.ssh
+  chmod 700 ~/.ssh
+  echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+  ssh-keyscan -H '${DEPLOYMENT_TARGET}' >> ~/.ssh/known_hosts
+
+# this hidden job is specific to our Ansible
+# it deploys a named ("techblog") docker container
+# see https://blog.callr.tech/gitlab-ansible-docker-ci-cd/
+.deploy: &deploy
+  - >
+    cd /var/ansible &&
+    sudo -E ansible-playbook deploy_docker_callr_applications.yml
+    --diff
+    --private-key="/var/ansible/ssh_keys/gitlab/gitlab-ci"
+    -i "inventories/$ANSIBLE_INVENTORY"
+    -l "$ANSIBLE_SUBSET"
+    -e "app=techblog tag=latest"
+
+Build:
+  stage: build
+  # remember to use specific version in your build images
+  # see https://blog.callr.tech/building-docker-images-with-gitlab-ci-best-practices/
+  image: docker:19.03.5-git 
+  only:
+    - master
+  # fetching submodules here because usually themes are git submodules
+  # see also the commented variables below
+  before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+  script:
+    - echo -n $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
+    # the image is tagged as latest, because it is the master branch
+    - docker build -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $CI_REGISTRY_IMAGE:latest
+
+Deploy:
+  stage: deploy
+  script: *deployment
+  allow_failure: false
+  # deploying master only
+  only:
+    - master
+  environment:
+    name: production
+  # # we tag specific runners here in our platform
+  # tags:
+  #   - deployment
+  variables:
+    # because the deployment stage does not need the source code anymore
+    # we set GIT_STRATEGY to none
+    GIT_STRATEGY: none
