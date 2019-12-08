@@ -17,8 +17,9 @@ services:
       - traefik.docker.network=traefik-public
       - traefik.frontend.entryPoints=http,https
       - traefik.frontend.headers.SSLRedirect=true
-
+      - traefik.frontend.headers.STSSeconds=315360000
+      - traefik.frontend.headers.STSIncludeSubdomains=true
+      - traefik.frontend.headers.STSPreload=true
 networks:
-  nodered:
   traefik-public:
     external: true
