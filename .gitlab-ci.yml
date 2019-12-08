@@ -4,6 +4,10 @@ stages:
   - release
   - deploy
 
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: ""
+
 .deployment: &deployment |
   # Setup SSH deploy keys
   which ssh-agent || ( apk add --no-cache openssh-client )
