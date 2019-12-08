@@ -19,6 +19,5 @@ services:
       - traefik.frontend.headers.SSLRedirect=true
 
 networks:
-  nodered:
   traefik-public:
     external: true
