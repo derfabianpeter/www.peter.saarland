@@ -43,8 +43,6 @@ version:
     - .next-version
   except:
     - tags
-  only:
-    - master
 
 Build:
   stage: build
