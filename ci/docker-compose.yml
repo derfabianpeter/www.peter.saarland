@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   peter-www:
-    image: $CI_REGISTRY_IMAGE:latest
+    image: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
     container_name: peter-www
     environment:
       - TZ=Europe/Berlin
