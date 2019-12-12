@@ -1,8 +1,8 @@
 stages:
   - version
   - build
-  - release
   - push
+  - release
   - deploy
 
 variables:
@@ -59,8 +59,6 @@ Build:
   # remember to use specific version in your build images
   # see https://blog.callr.tech/building-docker-images-with-gitlab-ci-best-practices/
   image: docker:19.03.5-git 
-  only:
-    - master
   # fetching submodules here because usually themes are git submodules
   # see also the commented variables below
   before_script:
@@ -125,9 +123,6 @@ Push tag:
   # docker login asks for the password to be passed through stdin for security
   # we use $CI_JOB_TOKEN here which is a special token provided by GitLab
   - echo -n $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
-  only:
-    # We want this job to be run on tags only.
-    - tags
   script:
     - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
     - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
@@ -145,6 +140,7 @@ Deploy:
     - master
   environment:
     name: production
+    url: https://www.peter.saarland
   # # we tag specific runners here in our platform
   # tags:
   #   - deployment
