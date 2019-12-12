@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.0.11
+2019-12-12
+
+### Fixes
+
+- **ci:** latest not loaded (f3c71e2f6794f41fe24efe344e4a785e39f7fc12)
+
 ## 0.0.10
 2019-12-12
 
