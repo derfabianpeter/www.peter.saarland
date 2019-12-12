@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.0.10
+2019-12-12
+
+### Fixes
+
+- **ci:** changed stages order and trigger (64ad155432b8c74c8f06fa00a232d33b8368f64e)
+
 ## 0.0.9
 2019-12-08
 
