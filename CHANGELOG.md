@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.3.0
+2019-12-15
+
+### Features
+
+- **ci:** Moved images to Docker Hub (a1cfab61d73675cc02d27fe673c426b311f9e844)
+
 ## 0.2.0
 2019-12-15
 
