@@ -8,6 +8,8 @@ stages:
 variables:
   DOCKER_DRIVER: overlay2
   DOCKER_TLS_CERTDIR: ""
+  CI_REGISTRY: docker.io
+  CI_REGISTRY_IMAGE: index.docker.io/derfabianpeter/profile
 
 .ssh: &ssh
   - eval $(ssh-agent -s)
@@ -54,17 +56,14 @@ version:
 
 Build:
   stage: build
-  services:
-  - docker:19.03.2-dind
-  # remember to use specific version in your build images
-  # see https://blog.callr.tech/building-docker-images-with-gitlab-ci-best-practices/
   image: docker:19.03.5-git 
+  services:
+    - docker:19.03.5-dind
   # fetching submodules here because usually themes are git submodules
-  # see also the commented variables below
   before_script:
     - git submodule sync --recursive
     - git submodule update --init --recursive
-    - echo -n $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
+    - echo -n $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin $CI_REGISTRY
   script:
     - docker pull $CI_REGISTRY_IMAGE:latest || true
     - docker build --cache-from $CI_REGISTRY_IMAGE:latest -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
@@ -84,45 +83,33 @@ Release:
   only:
     - master
 
-Push latest:
+Push Dockerhub:
   image: docker:19.03.5-git
   services:
-  - docker:19.03.2-dind
+    - docker:19.03.5-dind
   variables:
-    # We are just playing with Docker here. 
-    # We do not need GitLab to clone the source code.
     GIT_STRATEGY: none
   stage: push
   before_script:
-  # docker login asks for the password to be passed through stdin for security
-  # we use $CI_JOB_TOKEN here which is a special token provided by GitLab
-  - echo -n $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
-  only:
-    # Only "master" should be tagged "latest"
-    - master
+    - echo -n $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin $CI_REGISTRY
   script:
-    # Because we have no guarantee that this job will be picked up by the same runner 
-    # that built the image in the previous step, we pull it again locally
-    - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
-    # Then we tag it "latest"
+    - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA || true
     - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY_IMAGE:latest
-    # Annnd we push it.
     - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - master
 
 # Finally, the goal here is to Docker tag any Git tag
 # GitLab will start a new pipeline everytime a Git tag is created, which is pretty awesome
 Push tag:
+  stage: push
   image: docker:19.03.5-git
   services:
-  - docker:19.03.2-dind
+    - docker:19.03.5-dind
   variables:
-    # Again, we do not need the source code here. Just playing with Docker.
     GIT_STRATEGY: none
-  stage: push
   before_script:
-  # docker login asks for the password to be passed through stdin for security
-  # we use $CI_JOB_TOKEN here which is a special token provided by GitLab
-  - echo -n $CI_JOB_TOKEN | docker login -u gitlab-ci-token --password-stdin $CI_REGISTRY
+    - echo -n $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin $CI_REGISTRY
   script:
     - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
     - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_NAME
@@ -138,12 +125,8 @@ Deploy:
     - DOCKER_HOST=ssh://${DEPLOYMENT_TARGET} docker-compose -f ci/docker-compose.yml rm -f
     - DOCKER_HOST=ssh://${DEPLOYMENT_TARGET} docker-compose -f ci/docker-compose.yml -p peter-www up --remove-orphans -d
   allow_failure: false
-  # deploying master only
   only:
     - master
   environment:
     name: production
     url: https://www.peter.saarland
-  # # we tag specific runners here in our platform
-  # tags:
-  #   - deployment
