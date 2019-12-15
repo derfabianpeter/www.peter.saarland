@@ -29,7 +29,7 @@ theme = "coder"
 [params]
     author = "Fabian Peter"
     description = "Digitalisieren Sie Ihre Infrastruktur. Verkürzen Sie Ihre Deploymentprozesse. Optimieren Sie Ihre Release-Cycles. Lernen Sie die DevOps Methodology kennen."
-    avatarurl = "img/cube.png"
+    avatarurl = "img/profil-6-cube.jpg"
     dateformat = "Jan 2, 2006"
     keywords = "devops,developer,full-stack,saarland"
     info = "Full Stack DevOps Architect"
