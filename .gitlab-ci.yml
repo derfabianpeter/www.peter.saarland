@@ -110,9 +110,11 @@ Push GitHub:
     - git submodule update --init --recursive
   script:
     - *ssh
-    - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-    - git remote add github git@github.com:derfabianpeter/profile.git
-    - git push -u github master
+    - 'ssh-keyscan -H github.com >> ~/.ssh/known_hosts'
+    - 'git remote add github git@github.com:derfabianpeter/profile.git'
+    - 'git push -u github master'
+  only:
+    - master
 
 # Finally, the goal here is to Docker tag any Git tag
 # GitLab will start a new pipeline everytime a Git tag is created, which is pretty awesome
