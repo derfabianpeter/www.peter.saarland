@@ -1,6 +1,6 @@
 ## Basic Configuration
 baseurl = "https://www.peter.saarland/"
-title = "Fabian Peter | Full Stack DevOps Architect"
+title = "Fabian Peter | Cloud Solutions / DevOps Architect"
 languagecode = "de"
 defaultcontentlanguage = "de"
 
@@ -32,7 +32,7 @@ theme = "coder"
     avatarurl = "img/profil-6-cube.jpg"
     dateformat = "Jan 2, 2006"
     keywords = "devops,developer,full-stack,saarland"
-    info = "Full Stack DevOps Architect"
+    info = "Cloud Solutions / DevOps Architect"
     footercontent = "<a href='https://www.peter.saarland'><b>Peter.SAARLAND</b></a> | Kirchenstr. 41, 66798 Wallerfangen | Saarland, Germany | <a href='mailto:info@peter.saarland' title='Mail an info@peter.saarland'>info@peter.saarland</a> | <a href='tel:+4968379999040'>+49 6837 9999 040</a>"
 
     hideCredits = true

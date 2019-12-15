@@ -15,78 +15,85 @@ toc: false
 Denken & Handeln
 
 ## Methoden- und Technologieschwerpunkte
-* CI/CD
+* **Continuous Integration**
   * GitLab
   * GitLab Runner
   * Jenkins
   * Travis
-* DevOps/Cloud-Native Systems-Architecture
-* Builds
+  * Selenium
+  * Puppeteer
+* **Continuous Delivery**
   * Packer
   * Docker
   * Drone
-* Infrastructure as Code
+* **Continuous Deployment**
+  * Docker Swarm
+  * OpenShift
+  * Kubernetes
+* **DevOps/Cloud-Native Systems-Architecture**
+* **Infrastructure as Code**
   * Ansible
   * Terraform
   * Helm
   * docker compose/docker stack
-* Automation
+* **Automation**
   * NodeRed
   * GitLab
   * Nomad
-* Container Infrastructure
+* **Container Infrastructure**
   * Docker
   * Swarm
   * Kubernetes
   * Balena
-* Ops Management
+* **Ops Management**
   * Portainer
   * Consul
   * Ansible
-* Secrets Management
+* **Secrets Management**
   * Vault
   * Ansible Vault
-* Monitoring
+* **Monitoring**
   * Prometheus
   * Grafana
   * TICK
   * ELK
   * Netdata
-* Databases
+* **Databases**
   * Postgres
   * MySQL/MariaDB
   * MongoDB
   * Redis/Memcached
-* Messaging & Events
+* **Messaging & Events**
   * MQTT
   * nats
   * Celery
-* Authentication & Authorization
+* **Authentication & Authorization**
   * OAuth2
   * OpenID
   * Hydra
   * Keycloak
   * LDAP
   * Traefik
-* Scaling/Clustering Management
-* Desaster Recovery
-* Security
+* **Scaling/Clustering Management**
+* **Desaster Recovery**
+* **Security**
   * WAF
   * Reverse Proxy
   * API Gateway
-* Storage
+* **Storage**
   * [Storidge]((https://storidge.com/))
   * NFS
   * GlusterFS
   * Ceph
   * S3
-* SD-LAN/SD-WAN
-* Old-School Linux
-* Devolopment
+* **SD-LAN/SD-WAN**
+* **Old-School Linux**
+* **Devolopment**
   * Python
   * Go
+  * NodeJS
   * IaC
-* Programming Methodologies
+* **Programming Methodologies**
   * 12-Factor-App
   * Cloud-Native
   * SemVer
