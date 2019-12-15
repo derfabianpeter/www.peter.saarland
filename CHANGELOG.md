@@ -2,6 +2,14 @@
 
 <!--- next entry here -->
 
+## 0.1.0
+2019-12-15
+
+### Features
+
+- **profile:** preparing new profile picture (aece31d28011bfe0cdec31a7acfe582ee083ede0)
+- **profile:** added profile picture; edited about.md formatting (40ce571310299c8635d7f589c445a3bcc3a8f963)
+
 ## 0.0.11
 2019-12-12
 
