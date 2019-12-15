@@ -101,6 +101,9 @@ Push GitHub:
   script:
     - "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
     - "git remote add github git@github.com:derfabianpeter/profile.git"
+    - "git config user.name 'Munfred 187'"
+    - "git config user.email 'munfred@peter.saarland'"
+    - "git commit -am '$CI_COMMIT_SHA'"
     - "git push -u github master"
   only:
     - master
