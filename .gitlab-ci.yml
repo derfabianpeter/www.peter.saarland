@@ -103,10 +103,9 @@ Push GitHub:
     - "git remote add github git@github.com:derfabianpeter/profile.git"
     - "git config user.name 'Munfred 187'"
     - "git config user.email 'munfred@peter.saarland'"
+    - "git add ."
     - "git commit -am '$CI_COMMIT_SHA'"
     - "git push -u github master"
-  only:
-    - master
 
 # Finally, the goal here is to Docker tag any Git tag
 # GitLab will start a new pipeline everytime a Git tag is created, which is pretty awesome
