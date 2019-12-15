@@ -96,9 +96,8 @@ Push GitHub:
   stage: push
   image: docker:19.03.5-git 
   # fetching submodules here because usually themes are git submodules
-  before_script:
-    - *deployment
   script:
+    - *deployment
     - "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
     #- "git remote add github git@github.com:derfabianpeter/profile.git"
     - "git config user.name 'Munfred 187'"
