@@ -84,12 +84,12 @@ Release:
     - master
 
 Push Dockerhub:
+  stage: push
   image: docker:19.03.5-git
   services:
     - docker:19.03.5-dind
   variables:
     GIT_STRATEGY: none
-  stage: push
   before_script:
     - echo -n $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin $CI_REGISTRY
   script:
@@ -98,6 +98,21 @@ Push Dockerhub:
     - docker push $CI_REGISTRY_IMAGE:latest
   only:
     - master
+
+Push GitHub:
+  stage: push
+  image: docker:19.03.5-git 
+  services:
+    - docker:19.03.5-dind
+  # fetching submodules here because usually themes are git submodules
+  before_script:
+    - git submodule sync --recursive
+    - git submodule update --init --recursive
+  script:
+    - *ssh
+    - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+    - git remote add github git@github.com:derfabianpeter/profile.git
+    - git push -u github master
 
 # Finally, the goal here is to Docker tag any Git tag
 # GitLab will start a new pipeline everytime a Git tag is created, which is pretty awesome
