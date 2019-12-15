@@ -98,8 +98,9 @@ Push GitHub:
   # fetching submodules here because usually themes are git submodules
   script:
     - *deployment
-    - "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
-    #- "git remote add github git@github.com:derfabianpeter/profile.git"
+    #- "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
+    - git remote remove github
+    - "git remote add github git@github.com:derfabianpeter/profile.git"
     - "git config user.name 'Munfred 187'"
     - "git config user.email 'munfred@peter.saarland'"
     - "git add -A"
