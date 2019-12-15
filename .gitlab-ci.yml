@@ -11,13 +11,6 @@ variables:
   CI_REGISTRY: docker.io
   CI_REGISTRY_IMAGE: index.docker.io/derfabianpeter/profile
 
-.ssh: &ssh
-  - eval $(ssh-agent -s)
-  - ssh-add <(echo "$SSH_PRIVATE_KEY")
-  - mkdir -p ~/.ssh
-  #- echo "$GITLAB_SSH_HOSTKEYS" > ~/.ssh/known_hosts
-  - ssh-keyscan -H ${DEPLOYMENT_TARGET} > ~/.ssh/known_hosts
-
 .deployment: &deployment |
   # Setup SSH deploy keys
   which ssh-agent || ( apk add --no-cache openssh-client )
@@ -102,17 +95,13 @@ Push Dockerhub:
 Push GitHub:
   stage: push
   image: docker:19.03.5-git 
-  services:
-    - docker:19.03.5-dind
   # fetching submodules here because usually themes are git submodules
   before_script:
-    - git submodule sync --recursive
-    - git submodule update --init --recursive
-  script: |
-    *ssh
-    ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-    git remote add github git@github.com:derfabianpeter/profile.git
-    git push -u github master
+    - *deployment
+  script:
+    - "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
+    - "git remote add github git@github.com:derfabianpeter/profile.git"
+    - "git push -u github master"
   only:
     - master
 
