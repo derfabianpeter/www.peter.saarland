@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.2.0
+2019-12-15
+
+### Features
+
+- **profile:** changed profile pic (494f584a7f77e2647798d9f6a35f4acdc18d4235)
+
 ## 0.1.0
 2019-12-15
 
