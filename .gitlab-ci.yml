@@ -108,11 +108,11 @@ Push GitHub:
   before_script:
     - git submodule sync --recursive
     - git submodule update --init --recursive
-  script:
-    - *ssh
-    - 'ssh-keyscan -H github.com >> ~/.ssh/known_hosts'
-    - 'git remote add github git@github.com:derfabianpeter/profile.git'
-    - 'git push -u github master'
+  script: |
+    *ssh
+    ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+    git remote add github git@github.com:derfabianpeter/profile.git
+    git push -u github master
   only:
     - master
 
