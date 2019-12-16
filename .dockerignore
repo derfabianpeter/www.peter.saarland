@@ -1,0 +1,16 @@
+.gitlab-ci.yml
+.git
+.cache
+**/*.class
+*Dockerfile*
+*docker-compose*
+.dockerignore
+
+# In .dockerignore
+# Exclude all Markdown files:
+#
+*.md
+
+# Now make an exception for one file:
+#
+!README.md
