@@ -94,19 +94,14 @@ Push Dockerhub:
 
 Push GitHub:
   stage: push
-  image: docker:19.03.5-git 
+  image: registry.peter.saarland/fabian/if0:latest
   # fetching submodules here because usually themes are git submodules
   script:
     - *deployment
     #- "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
-    - git remote remove github
-    - "git remote add github git@github.com:derfabianpeter/profile.git"
-    - "git config user.name 'Munfred 187'"
-    - "git config user.email 'munfred@peter.saarland'"
-    - "git add -A"
-    - 'git diff-index --quiet HEAD || git commit -m "$CI_SERVER_NAME $CI_PIPELINE_ID"'
+    - 'if0 commit "$CI_SERVER_NAME $CI_PIPELINE_ID"'
     #- "git commit -am '$CI_COMMIT_SHA'"
-    - "git push -u github HEAD:master"
+    - 'if0 push git@github.com:derfabianpeter/profile.git'
 
 # Finally, the goal here is to Docker tag any Git tag
 # GitLab will start a new pipeline everytime a Git tag is created, which is pretty awesome
