@@ -104,8 +104,8 @@ Push GitHub:
     - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' > $HOME/.ssh/id_rsa
     - chmod 0600 $HOME/.ssh/id_rsa
   script:
-    #- "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
     - 'echo "Committing"'
+    - "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
     - 'if0 commit "$CI_SERVER_NAME $CI_PIPELINE_ID"'
     - 'echo "Pushing"'
     - 'if0 push git@github.com:derfabianpeter/profile.git'
