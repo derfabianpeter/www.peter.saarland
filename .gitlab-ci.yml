@@ -100,9 +100,12 @@ Push GitHub:
     - echo "Saving SSH Key for if0"
     - mkdir -p ~/.ssh
     - chmod 700 ~/.ssh
+    - which ssh-agent || ( apk add --no-cache openssh-client )
+    - eval $(ssh-agent -s)
+    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null 2>&1
     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    - echo "${SSH_PRIVATE_KEY}" > $HOME/.ssh/id_rsa
-    - chmod 0600 $HOME/.ssh/id_rsa
+    #- echo "${SSH_PRIVATE_KEY}" > $HOME/.ssh/id_rsa
+    #- chmod 0600 $HOME/.ssh/id_rsa
     - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
   script:
     - 'echo "Committing"'
