@@ -110,10 +110,6 @@ Push GitHub:
   script:
     - 'echo "Committing"'
     - 'if0 commit "$CI_SERVER_NAME $CI_PIPELINE_ID"'
-    - 'ls -la $HOME/.ssh'
-    - 'echo $HOME'
-    - 'pwd'
-    - 'ssh -vvv -l git github.com'
     - 'echo "Pushing"'
     - 'if0 push git@github.com:derfabianpeter/profile.git'
 
