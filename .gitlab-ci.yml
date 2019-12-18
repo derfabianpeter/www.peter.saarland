@@ -94,17 +94,24 @@ Push Dockerhub:
 
 Push GitHub:
   stage: push
-  image: $CI_REGISTRY/fabian/if0:latest
+  image: registry.peter.saarland/fabian/if0:latest
   # fetching submodules here because usually themes are git submodules
   before_script:
-    - *deployment
+    - echo "Saving SSH Key for if0"
+    - mkdir -p ~/.ssh
+    - chmod 700 ~/.ssh
+    - which ssh-agent || ( apk add --no-cache openssh-client )
+    - eval $(ssh-agent -s)
+    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null 2>&1
+    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+    #- echo "${SSH_PRIVATE_KEY}" > $HOME/.ssh/id_rsa
+    #- chmod 0600 $HOME/.ssh/id_rsa
+    - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
   script:
-    - "ssh-keyscan -H github.com >> ~/.ssh/known_hosts"
-    - "git remote add github git@github.com:derfabianpeter/profile.git"
-    - "git config user.name 'Munfred 187'"
-    - "git config user.email 'munfred@peter.saarland'"
-    - "git commit -am '$CI_COMMIT_SHA'"
-    - "git push -u github master"
+    - 'echo "Committing"'
+    - 'if0 commit "$CI_SERVER_NAME $CI_PIPELINE_ID"'
+    - 'echo "Pushing"'
+    - 'if0 push git@github.com:derfabianpeter/profile.git'
   only:
     - master
 

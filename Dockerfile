@@ -11,15 +11,12 @@ ADD https://github.com/gohugoio/hugo/releases/download/v${VERSION}/hugo_${VERSIO
 RUN tar -zxvf hugo.tar.gz
 RUN /hugo version
 
-# We add git to the build stage, because Hugo needs it with --enableGitInfo
-RUN apk add --no-cache git
-
 # The source files are copied to /site
 COPY . /site
 WORKDIR /site
 
 # And then we just run Hugo
-RUN /hugo --minify --enableGitInfo
+RUN /hugo --minify
 
 # stage 2
 FROM nginx:1.15-alpine
