@@ -92,28 +92,28 @@ Push Dockerhub:
   only:
     - master
 
-Push GitHub:
-  stage: push
-  image: registry.peter.saarland/fabian/if0:latest
-  # fetching submodules here because usually themes are git submodules
-  before_script:
-    - echo "Saving SSH Key for if0"
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - which ssh-agent || ( apk add --no-cache openssh-client )
-    - eval $(ssh-agent -s)
-    - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null 2>&1
-    - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
-    #- echo "${SSH_PRIVATE_KEY}" > $HOME/.ssh/id_rsa
-    #- chmod 0600 $HOME/.ssh/id_rsa
-    - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-  script:
-    - 'echo "Committing"'
-    - 'if0 commit "$CI_SERVER_NAME $CI_PIPELINE_ID"'
-    - 'echo "Pushing"'
-    - 'if0 push git@github.com:derfabianpeter/profile.git'
-  only:
-    - master
+# Push GitHub:
+#   stage: push
+#   image: registry.peter.saarland/fabian/if0:latest
+#   # fetching submodules here because usually themes are git submodules
+#   before_script:
+#     - echo "Saving SSH Key for if0"
+#     - mkdir -p ~/.ssh
+#     - chmod 700 ~/.ssh
+#     - which ssh-agent || ( apk add --no-cache openssh-client )
+#     - eval $(ssh-agent -s)
+#     - echo "${SSH_PRIVATE_KEY}" | tr -d '\r' | ssh-add - > /dev/null 2>&1
+#     - echo -e "Host *\n\tStrictHostKeyChecking no\n\n" > ~/.ssh/config
+#     #- echo "${SSH_PRIVATE_KEY}" > $HOME/.ssh/id_rsa
+#     #- chmod 0600 $HOME/.ssh/id_rsa
+#     - ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+#   script:
+#     - 'echo "Committing"'
+#     - 'if0 commit "$CI_SERVER_NAME $CI_PIPELINE_ID"'
+#     - 'echo "Pushing"'
+#     - 'if0 push git@github.com:derfabianpeter/profile.git'
+#   only:
+#     - master
 
 # Finally, the goal here is to Docker tag any Git tag
 # GitLab will start a new pipeline everytime a Git tag is created, which is pretty awesome
