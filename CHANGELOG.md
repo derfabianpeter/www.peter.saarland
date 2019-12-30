@@ -2,6 +2,48 @@
 
 <!--- next entry here -->
 
+## 0.4.0
+2019-12-30
+
+### Features
+
+- **ci:** Push code to github.com/derfabianpeter/profile (f4b77af00e61b21f14d32ecd4800eed0f02f9e16)
+- **ci:** Push code to github.com/derfabianpeter/profile (b2c453404ceb846c79d2692001b3e0f69f565492)
+- **ci:** Push code to github.com/derfabianpeter/profile (5179b644eb0687f709b395e75498bd92cf817a2c)
+- **ci:** Push code to github.com/derfabianpeter/profile (a19d5130e2c53aa435aa6ac3c6f3331754c3bde8)
+- **ci:** Push code to github.com/derfabianpeter/profile (4653cdf8067fc3a8c0a465a70b0eddce26602451)
+- **ci:** Push code to github.com/derfabianpeter/profile (2e590ad51e57a257977794935ca20edec99050b1)
+- **ci:** Push code to github.com/derfabianpeter/profile (36b1e3b924585f899a4df09d4e98f94a03659124)
+- added post about hosting setup (1321537efd91cf78ded177697d732dc6878d3287)
+
+### Fixes
+
+- **ci:** GitHub Push (87ef0159146acbb537d528e296fdbda47c7d7118)
+- **ci:** GitHub Push (eab442ec4cf156a7ee1bc4a73403563a1758ebe6)
+- **ci:** GitHub Push (791077b840bca89ad257757429b57b592616f2a9)
+- **ci:** GitHub Push (8ebd82bb31835fac0d6a4112096ac69a79cab235)
+- **ci:** GitHub Push (b9c40e2fc891e3bf13a1628db75decf1829dd6f8)
+- **ci:** GitHub Push (83b35fbd0eed3e6cb2af136637ebaf23f76ba5b2)
+- **ci:** Using if0 for GitHub push (fb6a502a9556d58ab378893acbfcb7c161e6fdf4)
+- **ci:** cleaned up messup (b297262f01986174a348845534e3c3fcdcdd37c4)
+- **ci:** cleaned up messup (0be49a03ab6a0f8ac3c8790ec3b4e8c460c03614)
+- **ci:** cleaned up messup (1b039fa441a815eea8a56b3fece8c571ff27ee74)
+- **ci:** cleaned up messup (b825b600a6b35512b24d16837f1b60740508f29d)
+- **ci:** cleaned up messup (a691472e9c50d7ff3aa54b69c592fcd5ef8b392c)
+- **ci:** cleaned up messup (c235fe6583bec6d0e1cc777eedc239f73cc72466)
+- **ci:** missing .ssh dir (f5a2b317e6ef923b8cc61163f71f2a49685ec402)
+- **ci:** missing .ssh dir (95fc7c34532c9adbc27390f79d4bc2522d84a48c)
+- **ci:** ssh auth issues (4312ea77470ba9b01b2c8910aa9f1911376026d4)
+- **ci:** ssh auth issues (b9198d7027003aae320d7382ee15f8f4b6955e22)
+- **ci:** ssh auth issues (5441a141bd4c36afc2ca3fb405b620f4398bc08f)
+- **ci:** ssh auth issues (9eee9c3f1b76cf93ed349bfb06dd6b3e7cd474e6)
+- **ci:** ssh auth issues (f0e7be4304d0352c0fdb600a0b160542c93ce289)
+- **ci:** ssh auth issues (db8d6806c0df3fc44236e03564ce57dce4ab0858)
+- **ci:** ssh auth issues (4dc8d8ee1e74a33b3c9d5970f62eddf2d0dc26cd)
+- **ci:** ssh auth issues (0995955847bb4baf08a6da4156dd5e4483067d42)
+- **ci:** run GitHub Push only on Master (d4d8d4a462084e5465280b136bc87ffe86ad1fab)
+- removed GitHub push from Pipelines for now (1d8a3b7533c8d75b9bcd8bdce1fcff5a110ef318)
+
 ## 0.3.0
 2019-12-15
 
