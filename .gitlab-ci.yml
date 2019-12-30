@@ -138,8 +138,8 @@ Deploy:
   image: tiangolo/docker-with-compose
   script: 
     - *deployment
-    - DOCKER_HOST=ssh://${DEPLOYMENT_TARGET} docker-compose -f ci/docker-compose.yml rm -f
-    - DOCKER_HOST=ssh://${DEPLOYMENT_TARGET} docker-compose -f ci/docker-compose.yml -p peter-www up --remove-orphans -d
+    - DOCKER_HOST=ssh://root@${DEPLOYMENT_TARGET} docker-compose -f ci/docker-compose.yml rm -f
+    - DOCKER_HOST=ssh://root@${DEPLOYMENT_TARGET} docker-compose -f ci/docker-compose.yml -p peter-www up --remove-orphans -d
   allow_failure: false
   only:
     - master
