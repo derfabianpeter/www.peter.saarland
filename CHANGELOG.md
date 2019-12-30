@@ -2,6 +2,15 @@
 
 <!--- next entry here -->
 
+## 0.5.1
+2019-12-30
+
+### Fixes
+
+- fixed SSH connection issues (a979eccdd09be65e6eccd21dadbcd87c4533de19)
+- fixed SSH connection issues (56796e002022ff057eb085770281eb399849d28b)
+- typo (90cb8d710f5b84da5827ce988cd894e4d21065c7)
+
 ## 0.5.0
 2019-12-30
 
