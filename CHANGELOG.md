@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.5.0
+2019-12-30
+
+### Features
+
+- changed favicon and profile image (09e9eecf1070c0028a2fa54c205e38a2f0f07acf)
+
 ## 0.4.0
 2019-12-30
 
