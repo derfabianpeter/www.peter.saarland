@@ -47,7 +47,7 @@ Cloudron handles E-Mail and DNS setup. You'll have to marry it to a DNS provider
 
 ![E-Mail](/img/cloudron-email.png)
 
-Additionally, Cloudron handles all your backups. Ideally you backup to an external S3 storage. Since Digitalocean ffers [Spaces](https://m.do.co/c/eed7786c83f3) and DNS, it might make sense to use it for both. I personally opted for [Wasabi](https://wasabi.com/) here as they have more competetive pricing for storage.
+Additionally, Cloudron handles all your backups. Ideally you backup to an external S3 storage. Since Digitalocean offers [Spaces](https://m.do.co/c/eed7786c83f3) and DNS, it might make sense to use it for both. I personally opted for [Wasabi](https://wasabi.com/) here as they have more competetive pricing for storage.
 
 ![Backups](/img/cloudron-backups.png)
 
@@ -58,7 +58,7 @@ The Cloudron subscription is needed to install more of their so called "Premium 
 
 ![Backups](/img/cloudron-apps.png)
 
-I'm happily paying it. The system not only does what I need from it, it's a platform to build upon (which I love!). It gets out of my way and doesn't require me to deal with tedious maintenance work or complex setup procedures. **It doesn't hold my data hostage!**. If I want to change hoster, platform or service, I simply export everything and move on.
+I'm happily paying it. The system not only does what I need from it, it's a platform to build upon (which I love!). It gets out of my way and doesn't require me to deal with tedious maintenance work or complex setup procedures. **It doesn't hold my data hostage!** If I want to change hoster, platform or service, I simply export everything and move on.
 
 It's super stable and reliable. I didn't have a single technical-related outage ever. And as mentioned, this setup powers my private stuff, work stuff and family stuff. There's clients for Nextcloud and E-Mail for every major platform, almost everything has an API I can tool with and it's all based on friggin Docker, so portability isn't an issue.
 
