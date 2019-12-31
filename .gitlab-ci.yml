@@ -1,8 +1,8 @@
 stages:
   - version
   - build
-  - push
   - release
+  - push
   - deploy
 
 variables:
@@ -62,7 +62,6 @@ Build:
     - tar -zxvf hugo.tar.gz
     - ./hugo --minify
   script:
-    - ./hugo --minify
     - docker pull $CI_REGISTRY_IMAGE:latest || true
     - docker build --cache-from $CI_REGISTRY_IMAGE:latest -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
@@ -78,15 +77,17 @@ Release:
     - rm -f release_info
     - mv build_info release_info
     - . release_info
-    - release -v
     - release changelog
     - release commit-and-tag CHANGELOG.md release_info
     - release --ci-commit-tag v$RELEASE_VERSION add-download-link -n release -u $RELEASE_URL -d "$RELEASE_DESC"
   only:
     - master
+  artifacts:
+    paths:
+    - release_info
 
 Push Dockerhub:
-  stage: release
+  stage: push
   image: docker:19.03.5-git
   services:
     - docker:19.03.5-dind
@@ -103,6 +104,7 @@ Push Dockerhub:
     - docker push $CI_REGISTRY_IMAGE:v$RELEASE_VERSION
   only:
     - master
+  
 
 Deploy:
   stage: deploy
