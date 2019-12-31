@@ -2,6 +2,17 @@
 
 <!--- next entry here -->
 
+## 0.7.1
+2019-12-31
+
+### Fixes
+
+- docker tags (12ad8efbbb0103857a19e2a364d7443ddbaf0292)
+- docker tags (2dd5f0c2bd4c9f244bc290fbfa02c2cd183fb7fa)
+- add content (c463d21012fedceeb1705ff3174315a3fbe0bc09)
+- release cycle, docker tags (d442cf9d5ddeec034d7db8388a6d47d70065ab13)
+- release cycle, docker tags (67cf7b2e3341eba1d037c1070966872f07b72c1e)
+
 ## 0.7.0
 2019-12-31
 

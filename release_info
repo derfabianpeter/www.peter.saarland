@@ -1,4 +1,4 @@
-RELEASE_URL=https://gitlab.com/api/v4/projects/16092249/jobs/391756143/artifacts/release
-RELEASE_DESC="x86_64 GNU/Linux binary"
-RELEASE_SHA=6487daa15f6636e7f53e6ba8784534a28824af93
-RELEASE_VERSION=0.7.0
+RELEASE_URL=https://www.peter.saarland
+RELEASE_DESC="Fabian Peter | DevOps Architect / Cloud Engineer"
+RELEASE_SHA=a7aa54f33053dad31fc3cf0e6ad39d10986d2408
+RELEASE_VERSION=0.7.1
