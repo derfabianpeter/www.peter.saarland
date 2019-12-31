@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.6.0
+2019-12-31
+
+### Features
+
+- added post 'What is Devops?' (54bb89902d9c9e4f9b8b396c0683cb7c5218cde6)
+
 ## 0.5.1
 2019-12-30
 
