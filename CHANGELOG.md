@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.7.0
+2019-12-31
+
+### Features
+
+- moved to gitlab.com as main repo (4c6f931960cbb6e5f5b910056b6a56b5fd8e74c5)
+
 ## 0.6.2
 2019-12-31
 
