@@ -2,6 +2,14 @@
 
 <!--- next entry here -->
 
+## 0.6.2
+2019-12-31
+
+### Fixes
+
+- corrected article date to match creation date (cd91ec25d682d7a82b7cab4e99b3c4b609e16a9f)
+- added footer Source Code info (4999e7c5429d9b6a4687357a9855c5a57cb7094f)
+
 ## 0.6.1
 2019-12-31
 
