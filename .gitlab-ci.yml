@@ -62,9 +62,10 @@ Build:
     - tar -zxvf hugo.tar.gz
     - ./hugo --minify
   script:
+    - . build_info
     - docker pull $CI_REGISTRY_IMAGE:latest || true
-    - docker build --cache-from $CI_REGISTRY_IMAGE:latest -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA .
-    - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA
+    - docker build --cache-from $CI_REGISTRY_IMAGE:latest -t $CI_REGISTRY_IMAGE:v$RELEASE_VERSION .
+    - docker push $CI_REGISTRY_IMAGE:v$RELEASE_VERSION
   artifacts:
     paths:
     - public
@@ -97,11 +98,9 @@ Push Dockerhub:
     - echo -n $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin $DOCKER_REGISTRY
   script:
     - . release_info
-    - docker pull $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA || true
-    - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA $CI_REGISTRY_IMAGE:latest
+    - docker pull $CI_REGISTRY_IMAGE:v$RELEASE_VERSION || true
+    - docker tag $CI_REGISTRY_IMAGE:v$RELEASE_VERSION $CI_REGISTRY_IMAGE:latest
     - docker push $CI_REGISTRY_IMAGE:latest
-    - docker tag $CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA $CI_REGISTRY_IMAGE:v$RELEASE_VERSION
-    - docker push $CI_REGISTRY_IMAGE:v$RELEASE_VERSION
   only:
     - master
   
