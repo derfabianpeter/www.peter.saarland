@@ -1,3 +1,5 @@
+[![pipeline status](https://git.peter.saarland/fabian/peter-www/badges/master/pipeline.svg)](https://git.peter.saarland/fabian/peter-www/commits/master)
+
 # www.peter.saarland
 This is the Source Code for my personal Website - https://www.peter.saarland. It's also an experiment in social distribution.
 
