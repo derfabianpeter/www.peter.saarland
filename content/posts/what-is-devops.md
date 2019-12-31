@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2019-12-31T11:55:31+01:00
 title = "What is DevOps?"
 description = "Hint: it's about more than just knowing how to run Containers."
