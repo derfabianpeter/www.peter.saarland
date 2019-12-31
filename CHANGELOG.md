@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.8.1
+2019-12-31
+
+### Fixes
+
+- using latest image in compose (afef9c0b64d953c0a17f3df43ce0dbcaeddc1d47)
+
 ## 0.8.0
 2019-12-31
 
