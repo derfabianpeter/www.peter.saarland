@@ -2,6 +2,22 @@
 
 <!--- next entry here -->
 
+## 0.8.0
+2019-12-31
+
+### Features
+
+- changed image structure, release cycle, pipeline order (cd2cbe8611346a1e7d2889142dd29636bffb949c)
+
+### Fixes
+
+- release cycle, docker tags (ea2bd0e94b55f2e0bfd87440fed33de7b28dcb57)
+- release cycle, docker tags (c9a08f60c482ec06f983e7e5b9b1d6f9f38d00c1)
+- release cycle, docker tags (be540e930d4b91f98a0f23db3f4190b108707640)
+- release cycle, docker tags (1cb51d782d89b70fea2efb453cee696259e6a1f6)
+- merge conflict (bb89545967e539b4ef83d56c34bfd2e041d0e794)
+- merge conflict (34abee530ddf77f0bdafa6621aa6963655eadce7)
+
 ## 0.7.1
 2019-12-31
 
