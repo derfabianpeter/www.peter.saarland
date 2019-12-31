@@ -38,7 +38,7 @@ version:
     - release next-version --allow-current
     - release next-version --allow-current > .next-version
     - echo "RELEASE_URL=https://www.peter.saarland" > build_info
-    - echo "RELEASE_DESC=Fabian Peter | DevOps Architect / Cloud Engineer" >> build_info
+    - echo "RELEASE_DESC=\"Fabian Peter | DevOps Architect / Cloud Engineer\"" >> build_info
     - echo "RELEASE_SHA=$CI_COMMIT_SHA" >> build_info
     - echo "RELEASE_VERSION=$(<.next-version)" >> build_info
   artifacts:
