@@ -62,6 +62,17 @@ Build:
     - docker build --cache-from $CI_REGISTRY_IMAGE:latest -t $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA .
     - docker push $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
 
+GitLab Pages:
+  image: registry.gitlab.com/pages/hugo:latest
+  stage: release
+  script:
+    - hugo
+  artifacts:
+    paths:
+    - public
+  only:
+    - master
+
 # Release new Version
 Release:
   stage: release
