@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.6.1
+2019-12-31
+
+### Fixes
+
+- changed draf status (dab34a1023f36c0fbc322a7a5911a06b3602c01f)
+
 ## 0.6.0
 2019-12-31
 
