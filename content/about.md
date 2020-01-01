@@ -15,94 +15,31 @@ toc: false
 Denken & Handeln
 
 ## Methoden- und Technologieschwerpunkte
-* **Continuous Integration**
-  * GitLab
-  * GitLab Runner
-  * Jenkins
-  * Travis
-  * Selenium
-  * Puppeteer
-* **Continuous Delivery**
-  * Packer
-  * Docker
-  * Drone
-* **Continuous Deployment**
-  * Docker Swarm
-  * OpenShift
-  * Kubernetes
-* **DevOps/Cloud-Native Systems-Architecture**
-* **Infrastructure as Code**
-  * Ansible
-  * Terraform
-  * Helm
-  * docker compose/docker stack
-* **Automation**
-  * NodeRed
-  * GitLab
-  * Nomad
-* **Container Infrastructure**
-  * Docker
-  * Swarm
-  * Kubernetes
-  * Balena
-* **Ops Management**
-  * Portainer
-  * Consul
-  * Ansible
-* **Secrets Management**
-  * Vault
-  * Ansible Vault
-* **Monitoring**
-  * Prometheus
-  * Grafana
-  * TICK
-  * ELK
-  * Netdata
-* **Databases**
-  * Postgres
-  * MySQL/MariaDB
-  * MongoDB
-  * Redis/Memcached
-* **Messaging & Events**
-  * MQTT
-  * nats
-  * Celery
-* **Authentication & Authorization**
-  * OAuth2
-  * OpenID
-  * Hydra
-  * Keycloak
-  * LDAP
-  * Traefik
-* **Scaling/Clustering Management**
-* **Desaster Recovery**
-* **Security**
-  * WAF
-  * Reverse Proxy
-  * API Gateway
-* **Storage**
-  * [Storidge]((https://storidge.com/))
-  * NFS
-  * GlusterFS
-  * Ceph
-  * S3
-* **SD-LAN/SD-WAN**
-* **Old-School Linux**
-* **Devolopment**
-  * Python
-  * Go
-  * NodeJS
-  * IaC
-* **Programming Methodologies**
-  * 12-Factor-App
-  * Cloud-Native
-  * SemVer
+* **Continuous Integration**: GitLab, GitLab Runner, Jenkins, Travis, Selenium, Puppeteer
+* **Continuous Delivery**: Packer, Docker, Drone, Concourse
+* **Continuous Deployment**: Docker Swarm, OpenShift, Kubernetes
+* **Infrastructure as Code**: Ansible, Terraform, Helm, docker compose, docker stack
+* **Automation**: NodeRed, GitLab, Nomad
+* **Container Infrastructure**: Docker, Swarm, Kubernetes, Balena
+* **Ops Management**: Portainer, Consul, Ansible, GitOps
+* **Secrets Management**: Hashicorp Vault, Ansible Vault
+* **Monitoring**: Prometheus, Grafana, TICK, ELK, Netdata
+* **Databases**: Postgres, MySQL/MariaDB, MongoDB, Redis/Memcached
+* **Messaging & Events**: MQTT, nats, Celery
+* **Authentication & Authorization**: OAuth2, OpenID, Hydra, Keycloak, LDAP, Traefik
+* **Desaster Recovery**: restic, GitOps, S3
+* **Security**: WAF, Reverse Proxy, API Gateway, Vulnerability Scans
+* **Storage**: Storidge, NFS, GlusterFS, Ceph, S3
+* **SD-LAN/SD-WAN**: ZeroTier, Unifi
+* **Old-School Linux**: just ask
+* **Devolopment**: Python, Go, NodeJS, IaC
+* **Methodologies**: 12-Factor-App, Cloud-Native, SemVer, DevOps, Scrum
 
 ## Expertise
 Meine Stärken liegen in Entwurf, Entwicklung und Betrieb verteilter, hochverfügbarer und automatisierter Anwendungen und Infrastrukturen – on-premise oder in der Cloud - mit Fokus auf Idempotenz und Prozess-Automatisierung. Mit fast 10 Jahren SaaS-Background und tiefem Wissen im Bereich DNS, verteilte Netzwerke und Skalierbarkeit von Diensten biete ich ein breites Spektrum an Lösungen für den Betrieb von Cloud-Anwendungen, Entwicklungs-Umgebungen und Automatisierung im Bereich Hosting und Development (CI/CD). Ich kenne die Anforderungen von Entwicklern und Betreibern aus eigener Erfahrung und biete somit mehr als nur das DevOps-Bindeglied. Ich arbeite mit modernen, agilen Methoden und orientiere mich bei Entwurf und Betrieb meiner Projekte an zeitaktuellen Standards um zukunftssichere und effiziente Systeme zu schaffen. Ziel meiner Arbeit ist immer eine nachhaltige, skalierbare und transparente Optimierung des Status Quo.
 
 ## Kunden/Auftraggeber (Auszug)
-From 2009 to today, I worked with/for:
+Seit 2009 habe ich unter anderem mit/für folgende(n) Unternehmen gearbeitet:
 * SEWOBE AG
 * Micro-Biolytics GmbH
 * Sehen-Saar MVZ GmbH
@@ -125,8 +62,11 @@ For you, DevOps is not just a buzzword. You are both a hands-on person with a "g
 -->
 
 
-## Zertifizierungen
+## Zertifizierungen / Ausbildung / Studium
 * Ausbildung der Ausbilder (IHK Ausbilderschein)
+* Ausbildung Fachinformatiker f. Systemintegration (2009-2012)
+* Studium "Kommunikationsinformatik" (Universität des Saarlandes, 2008-2009, ohne Abschluss)
+* Zivildienst (Arbeiterwohlfahrt Saarland, 2007-2008)
 
 ## Sonstiges
 Die folgenden Projekte und DevOps-Tools sind Eigenentwicklungen oder spezielle Integrationen bestehender Systeme. Code-Beispiele auf Anfrage. Open-Source Releases der Projekte sind für Mitte 2020 geplant.
