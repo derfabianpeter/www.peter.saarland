@@ -1,4 +1,4 @@
 RELEASE_URL=https://www.peter.saarland
 RELEASE_DESC="Fabian Peter | DevOps Architect / Cloud Engineer"
-RELEASE_SHA=03a589185c61267d8f1cbeaec9cece90547e1d22
-RELEASE_VERSION=0.8.1
+RELEASE_SHA=11819394c94b5d3b581e4aef326b544dbe3b0a4f
+RELEASE_VERSION=0.8.2
