@@ -40,6 +40,7 @@ Meine Stärken liegen in Entwurf, Entwicklung und Betrieb verteilter, hochverfü
 
 ## Kunden/Auftraggeber (Auszug)
 Seit 2009 habe ich unter anderem mit/für folgende(n) Unternehmen gearbeitet:
+
 * SEWOBE AG
 * Micro-Biolytics GmbH
 * Sehen-Saar MVZ GmbH

@@ -29,12 +29,12 @@ theme = "coder"
 [params]
     author = "Fabian Peter"
     description = "Digitalisieren Sie Ihre Infrastruktur. Verkürzen Sie Ihre Deploymentprozesse. Optimieren Sie Ihre Release-Cycles. Lernen Sie die DevOps Methodology kennen."
-    avatarurl = "img/profile-8.jpg"
+    avatarurl = "/img/profile-8.jpg"
     dateformat = "Jan 2, 2006"
     keywords = "devops,developer,full-stack,saarland"
     info = "DevOps Architect / Cloud Engineer"
     footercontent = "<a href='https://www.peter.saarland'><b>Peter.SAARLAND</b></a> | Kirchenstr. 41, 66798 Wallerfangen | Saarland, Germany | <a href='mailto:info@peter.saarland' title='Mail an info@peter.saarland'>info@peter.saarland</a> | <a href='tel:+4968379999040'>+49 6837 9999 040</a> | <a href='https://github.com/derfabianpeter/www.peter.saarland' title='Source Code'>Source Code</a>"
-    favicon_32 = "img/favicon-32x32.png"
+    favicon_32 = "/img/favicon-32x32.png"
 
     hideCredits = true
     hideCopyright = true
