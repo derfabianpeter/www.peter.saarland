@@ -55,8 +55,6 @@ Build:
     - docker:19.03.5-dind
   # fetching submodules here because usually themes are git submodules
   before_script:
-    - git submodule sync --recursive
-    - git submodule update --init --recursive
     - echo -n $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin $DOCKER_REGISTRY
     - wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
     - tar -zxvf hugo.tar.gz
