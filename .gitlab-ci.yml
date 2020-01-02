@@ -87,15 +87,6 @@ Release:
     paths:
     - release_info
 
-CV:
-  stage: release
-  image: thecodingmachine/gotenberg:6
-  script:
-    - "curl --request POST --url localhost:3000/convert/html --header 'Content-Type: multipart/form-data' --form files=@public/about/index.html -o cv.pdf"
-  artifacts:
-    paths:
-    - cv.pdf
-
 Push Dockerhub:
   stage: push
   image: docker:19.03.5-git
