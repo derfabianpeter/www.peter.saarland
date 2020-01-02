@@ -16,3 +16,6 @@ hugo new kontakt.md
 
 # Deploy
 TBD
+
+## Netlify
+- URL: https://nifty-allen-e9a5be.netlify.com/

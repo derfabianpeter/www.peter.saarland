@@ -1,0 +1,7 @@
+[build]
+  publish = "public"
+  command = "hugo --minify --baseURL $URL"
+
+[context.production.environment]
+  HUGO_VERSION = "0.62.0"
+
