@@ -2,6 +2,22 @@
 
 <!--- next entry here -->
 
+## 0.9.0
+2020-01-02
+
+### Features
+
+- auto-CV from about.md (69c5709ddb9ec0610eb1454cce320da01eb2a34f)
+
+### Fixes
+
+- typo (ff77272197954ee7442b7d1916078a0956ccce5a)
+- removed external dependencies from theme (2933fc5724e5a885aa4daae957f74208969bf705)
+- local fonts (a1cd5b84b908e92d9e74c271938ad52019ee3aea)
+- local fonts (125eaa05278f0ea9c060e289e05502b988ac5ab2)
+- local fonts (a1df9743663e29228a6b40cb0ab9fe15be5bbf4c)
+- local fonts (359982e8c71305feec8d5c22931a85d0bc15ce27)
+
 ## 0.8.2
 2020-01-01
 
