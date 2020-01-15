@@ -6,7 +6,7 @@ toc: false
 ---
 
 ## Auf einen Blick
-* **Haupttätigkeit**: DevOps Architect
+* **Haupttätigkeit**: DevOps Consultant
 * **Jahrgang**: 1988
 * **IT-Berufserfahrung**: seit 2009
 * **Ausbildung**: Fachinformatiker f. Systemintegration

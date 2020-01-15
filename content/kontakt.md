@@ -6,7 +6,7 @@ toc: false
 ---
 
 ## Verfügbarkeit
-* **Verfügbar ab**: 02/2020
+* **Verfügbar ab**: 03/2020
 * **Festanstellung**: nein
 * **Vor-Ort-Projekte**: im Raum Saarland/Rheinland-Pfalz/Luxemburg
 * **Stundensatz**: auf Anfrage
