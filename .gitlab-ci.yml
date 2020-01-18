@@ -60,8 +60,8 @@ Build:
     - tar -zxvf hugo.tar.gz
     - ./hugo --minify
     - apk add curl
-    - ls -lah */*
-    - "curl --request POST --url https://gotenberg.devops-projects.de/convert/html --header 'Content-Type: multipart/form-data' --form files=@public/about/index.html -o public/cv.pdf"
+    #- ls -lah */*
+    #- "curl --request POST --url https://gotenberg.devops-projects.de/convert/html --header 'Content-Type: multipart/form-data' --form files=@public/about/index.html -o public/cv.pdf"
   script:
     - . build_info
     - docker pull $CI_REGISTRY_IMAGE:latest || true
