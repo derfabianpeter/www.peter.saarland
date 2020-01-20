@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.11.1
+2020-01-20
+
+### Fixes
+
+- wrong RELEASE_URL (f97c78397d8cc23333ba7bf34927565fdafbdc47)
+
 ## 0.11.0
 2020-01-20
 
