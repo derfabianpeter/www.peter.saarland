@@ -2,6 +2,14 @@
 
 <!--- next entry here -->
 
+## 0.9.1
+2020-01-03
+
+### Fixes
+
+- execution order; pdf is missing in build (8d91f270ff0e194cae8008554ecbe19b724b4808)
+- execution order; pdf is missing in build (60f77d0600cf5ec6ca72fda06629b10809d0cd0a)
+
 ## 0.9.0
 2020-01-02
 

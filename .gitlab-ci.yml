@@ -64,6 +64,7 @@ Build:
     #- "curl --request POST --url https://gotenberg.devops-projects.de/convert/html --header 'Content-Type: multipart/form-data' --form files=@public/about/index.html -o public/cv.pdf"
   script:
     - . build_info
+    - ls -la public/
     - docker pull $CI_REGISTRY_IMAGE:latest || true
     - docker build --cache-from $CI_REGISTRY_IMAGE:latest -t $CI_REGISTRY_IMAGE:v$RELEASE_VERSION .
     - docker push $CI_REGISTRY_IMAGE:v$RELEASE_VERSION
