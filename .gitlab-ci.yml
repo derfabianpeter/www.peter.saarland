@@ -59,7 +59,11 @@ Build:
     - wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
     - tar -zxvf hugo.tar.gz
     - ./hugo
-    - ls -lah
+    - ls -lah themes/
+    - ls -lah themes/*
+    - ls -lah content/
+    - ls -lah content/*
+    - ./hugo version
     #- apk add curl
     #- ls -lah */*
     #- "curl --request POST --url https://gotenberg.devops-projects.de/convert/html --header 'Content-Type: multipart/form-data' --form files=@public/about/index.html -o public/cv.pdf"
