@@ -2,6 +2,16 @@
 
 <!--- next entry here -->
 
+## 0.9.2
+2020-01-20
+
+### Fixes
+
+- ci (adbf3d2526d7a6e9da70ad61977f83312e159ba7)
+- title (61d7c9ac3950977b8dfa66caf3a0cee2be75905c)
+- useless CI stuff (f140648f893db1a3e7f3c4f0e66bc0d47c87eb84)
+- ci (1179d401f19f00a0ffe8395216043ab52b0269b7)
+
 ## 0.9.1
 2020-01-03
 
