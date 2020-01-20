@@ -33,7 +33,7 @@ version:
   stage: version
   image: registry.gitlab.com/juhani/go-semrel-gitlab:v0.21.1
   variables:
-    - GSG_INITIAL_DEVELOPMENT: "false"
+    GSG_INITIAL_DEVELOPMENT: "false"
   script:
     - release test-git || true
     - release test-api
