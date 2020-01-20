@@ -50,6 +50,7 @@ version:
   except:
     - tags
 
+
 Build:
   stage: build
   image: docker:19.03.5-git 
@@ -78,6 +79,8 @@ Build:
 Release:
   stage: release
   image: registry.gitlab.com/juhani/go-semrel-gitlab:v0.21.1
+  variables:
+    GSG_INITIAL_DEVELOPMENT: "false"
   script:
     - rm -f release_info
     - mv build_info release_info
