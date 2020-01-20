@@ -1,0 +1,26 @@
+name = "Peter.SAARLAND"
+license = "CC BY-NC-ND 4.0"
+licenselink = "https://github.com/derfabianpeter/www.peter.saarland/blob/master/LICENSE.md"
+description = "Theme for Peter.SAARLAND"
+homepage = "https://www.peter.saarland/"
+tags = [
+  "blog",
+  "minimal",
+  "minimalist",
+  "responsive",
+  "simple",
+  "clean",
+  "personal"
+]
+features = [
+  "analytics",
+  "favicon",
+  "pagination",
+  "single-column",
+  "syntax-highlighting"
+]
+min_version = "0.54"
+
+[author]
+  name = "Fabian Peter"
+  homepage = "https://www.peter.saarland/"
