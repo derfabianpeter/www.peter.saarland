@@ -31,3 +31,4 @@ This repository is deployed via GitLab CI.
 
 ## Netlify
 - URL: https://nifty-allen-e9a5be.netlify.com/
+- 
