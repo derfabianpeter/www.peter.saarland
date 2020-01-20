@@ -2,6 +2,14 @@
 
 <!--- next entry here -->
 
+## 0.11.0
+2020-01-20
+
+### Features
+
+- added Code Owners (6e0b9b20fc63be781220596d9e111417bf777d7d)
+- added commitizen (dbc1eb4bb34bb7df7f7ef75ba7e2acc7764c1368)
+
 ## 0.10.0
 2020-01-20
 
