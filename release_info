@@ -1,4 +1,4 @@
-RELEASE_URL=https://gitlab.com/derfabianpeter/www.peter.saarland/-/releases/v0.11.0
+RELEASE_URL=https://gitlab.com/derfabianpeter/www.peter.saarland/-/releases/v0.11.2
 RELEASE_DESC="Fabian Peter | DevOps Consultant"
-RELEASE_SHA=b6b0f4dde244f1f379d9c3c08fd5b900394e8257
-RELEASE_VERSION=0.11.0
+RELEASE_SHA=4635bd5c04fa53e629ddd09d931f790c621ed7dc
+RELEASE_VERSION=0.11.2

@@ -2,6 +2,23 @@
 
 <!--- next entry here -->
 
+## 0.10.0
+2020-01-20
+
+### Features
+
+- BUILD_DATE (5471b4f14d6c44e090fbff7e022c9d1e6770cee4)
+- added Code Owners (6e0b9b20fc63be781220596d9e111417bf777d7d)
+- added commitizen (dbc1eb4bb34bb7df7f7ef75ba7e2acc7764c1368)
+
+### Fixes
+
+- wrong RELEASE_URL (f97c78397d8cc23333ba7bf34927565fdafbdc47)
+- hugo version (452fcfb4af412ec33def796bf8b136a616f0e471)
+- hugo version (fcb2da072fa9891a72a437dfe56d8b6403aa6289)
+- hugo version (86d1ea14dfdd8a318ca4c4f4cd5418c862a236f2)
+- theme submodule broken (869d1c2c032a0ea4ff73541cc2845545bb482aa2)
+
 ## 0.11.1
 2020-01-20
 
