@@ -2,6 +2,15 @@
 
 <!--- next entry here -->
 
+## 0.13.0
+2020-01-20
+
+### Breaking changes
+
+#### BREAKING CHANGE: Release 1.0.0 (b6b1684e5f896c623dd7ba67d35a4d7168437eee)
+
+Release 1.0.0
+
 ## 0.12.0
 2020-01-20
 
