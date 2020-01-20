@@ -1,4 +1,5 @@
 [![pipeline status](https://gitlab.com/derfabianpeter/www.peter.saarland/badges/master/pipeline.svg)](https://gitlab.com/derfabianpeter/www.peter.saarland/commits/master)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 # www.peter.saarland
 This is the Source Code for my personal Website - https://www.peter.saarland. It's also an experiment in social distribution.
