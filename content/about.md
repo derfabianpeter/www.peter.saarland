@@ -6,13 +6,12 @@ toc: false
 ---
 
 ## Auf einen Blick
-* **Haupttätigkeit**: DevOps Architect
+* **Haupttätigkeit**: DevOps Consultant
 * **Jahrgang**: 1988
 * **IT-Berufserfahrung**: seit 2009
-* **Ausbildung**: Fachinformatiker f. Systemintegration
 * **Sprachen**: Deutsch (Muttersprache), Englisch (verhandlungssicher)
 * **Eigenschaften**: Problemlöser, systemischer Denker, schnelle Auffassungsgabe, ergebnisorientiert, unternehmerisches
-Denken & Handeln
+Denken & Handeln, Teamplayer
 
 ## Methoden- und Technologieschwerpunkte
 * **Continuous Integration**: GitLab, GitLab Runner, Jenkins, Travis, Selenium, Puppeteer
@@ -76,4 +75,4 @@ Die folgenden Projekte und DevOps-Tools sind Eigenentwicklungen oder spezielle I
 * **mimiq**: Python-Basierter DNS-Filter (verteilte, leichtgewichtige Alternative zu PiHole). Technologien: Redis, MongoDB, Python, Docker, CI/CD
 * **zero**: IaC-basierte Plattform für IoT-Deployments. Technologien: ZeroTier, Ansible, Docker Swarm, ARM-Devices, Cloud-Services (Cloudflare, Wasabi, HETZNER)
 * **if0**: Go-basierte DevOps Toolchain (CLI). Technolgien: REST APIs, Websockets, Docker, Packer, CI/CD, Elasticsearch, NodeRed
-* **devops-projects.de**: An auto-generated list of DevOps Projects from popular German Sites
+* [DevOps Projects](https://devops-projects.de): A HackerNews-like App for DevOps related Content

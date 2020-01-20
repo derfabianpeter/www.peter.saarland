@@ -58,9 +58,10 @@ Build:
     - echo -n $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin $DOCKER_REGISTRY
     - wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
     - tar -zxvf hugo.tar.gz
-    - apk add curl
     - ./hugo --minify
-    - "curl --request POST --url https://gotenberg.devops-projects.de/convert/html --header 'Content-Type: multipart/form-data' --form files=@public/about/index.html -o public/cv.pdf"
+    #- apk add curl
+    #- ls -lah */*
+    #- "curl --request POST --url https://gotenberg.devops-projects.de/convert/html --header 'Content-Type: multipart/form-data' --form files=@public/about/index.html -o public/cv.pdf"
   script:
     - . build_info
     - ls -la public/
