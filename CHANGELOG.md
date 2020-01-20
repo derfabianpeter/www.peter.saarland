@@ -2,6 +2,13 @@
 
 <!--- next entry here -->
 
+## 0.10.0
+2020-01-20
+
+### Features
+
+- BUILD_DATE (5471b4f14d6c44e090fbff7e022c9d1e6770cee4)
+
 ## 0.9.2
 2020-01-20
 
