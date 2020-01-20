@@ -2,6 +2,24 @@
 
 <!--- next entry here -->
 
+## 1.0.0
+2020-01-20
+
+### Breaking changes
+
+#### BREAKING CHANGE: Release 1.0.0 (582b2a2d89cde9852e7fc2eaa91b68b6fe04f176)
+
+Release 1.0.0
+
+#### BREAKING CHANGE: Release 1.0.0 (6cd445cf8489755f30f055cc8314ae600f38c09a)
+
+Release 1.0.0
+
+### Fixes
+
+- ci (3df37a5cf51dfd2ffb3650681efd54d5dd1c04f9)
+- ci (38af4a4d56c50bebef62f8151b89be4da29bef55)
+
 ## 0.13.0
 2020-01-20
 
