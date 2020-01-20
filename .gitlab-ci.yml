@@ -49,6 +49,7 @@ version:
     - .next-version
   except:
     - tags
+    
 
 Build:
   stage: build
