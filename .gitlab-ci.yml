@@ -10,7 +10,7 @@ variables:
   DOCKER_TLS_CERTDIR: ""
   DOCKER_REGISTRY: docker.io
   CI_REGISTRY_IMAGE: index.docker.io/derfabianpeter/www.peter.saarland
-  HUGO_VERSION: "0.62.0"
+  HUGO_VERSION: "0.60.1"
 
 .deployment: &deployment |
   # Setup SSH deploy keys
@@ -58,7 +58,7 @@ Build:
     - echo -n $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USER --password-stdin $DOCKER_REGISTRY
     - wget -O hugo.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz
     - tar -zxvf hugo.tar.gz
-    - ./hugo --minify
+    - ./hugo
     #- apk add curl
     #- ls -lah */*
     #- "curl --request POST --url https://gotenberg.devops-projects.de/convert/html --header 'Content-Type: multipart/form-data' --form files=@public/about/index.html -o public/cv.pdf"
